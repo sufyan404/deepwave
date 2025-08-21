@@ -63,6 +63,8 @@ function App() {
       { type: 'a', text: dataString },
     ]);
   };
+  // console.log(histoey);
+  // console.log(result);
 
   const clearHistory = () => {
     localStorage.clear();
@@ -70,6 +72,7 @@ function App() {
   };
 
   useEffect(() => {
+    console.log(savedHistory);
   }, [savedHistory, setSavedHistory]);
 
   useEffect(() => {
@@ -141,11 +144,14 @@ function App() {
               <span className='sr-only'>Loading...</span>
             </div>
           ) : null}
-          <div ref={scrollPage} className='container h-[370px] overflow-y-auto dark:text-white'>
+          <div
+            ref={scrollPage}
+            className='container h-[370px] overflow-y-auto dark:text-white'
+          >
             <div>
               <ul>
                 {result.map((item, index) => (
-                  <Chat item={item} index={index}  key={index}/>
+                  <Chat item={item} index={index} key={index} />
                 ))}
               </ul>
             </div>
