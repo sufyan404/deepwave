@@ -63,8 +63,6 @@ function App() {
       { type: 'a', text: dataString },
     ]);
   };
-  // console.log(histoey);
-  // console.log(result);
 
   const clearHistory = () => {
     localStorage.clear();
@@ -72,7 +70,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(savedHistory);
   }, [savedHistory, setSavedHistory]);
 
   useEffect(() => {
@@ -148,7 +145,7 @@ function App() {
             <div>
               <ul>
                 {result.map((item, index) => (
-                  <Chat item={item} index={index} />
+                  <Chat item={item} index={index}  key={index}/>
                 ))}
               </ul>
             </div>
