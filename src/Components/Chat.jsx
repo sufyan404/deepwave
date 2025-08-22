@@ -5,12 +5,12 @@ function Chat({ item, index }) {
   return (
     <>
       <div
-        key={Math.random()}
+        key={index}
         className={item.type === 'q' ? 'flex justify-end mr-4' : 'mr-40'}
       >
         {item.type == 'q' ? (
           <li
-            key={Math.random()}
+            key={index}
             className='text-right border-4 border-zinc-300 bg-zinc-300 rounded-tl-3xl rounded-br-3xl rounded-bl-3xl min-w-12 max-w-xl p-1 dark:bg-zinc-500 dark:border-zinc-500'
           >
             <Answers

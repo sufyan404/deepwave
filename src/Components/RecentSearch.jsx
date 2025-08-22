@@ -20,12 +20,12 @@ function RecentSearch({ clearHistory, histoey, setSavedHistory, handleClick }) {
         </h1>
         <ul className='text-left overflow-auto'>
           {histoey &&
-            histoey.map(item => (
+            histoey.map((item, index) => (
               <li
                 onClick={() => {
                   setSavedHistory(item), handleClick();
                 }}
-                key={Math.random()}
+                key={index}
                 className='p-1 pl-5 cursor-pointer hover:bg-zinc-400 truncate pt-2'
               >
                 {item}
