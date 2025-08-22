@@ -15,7 +15,8 @@ function Answers({ ans, index, totalResults, type }) {
     } else {
       setAnswer(ans);
     }
-  }, [ans]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const render = {
     // eslint-disable-next-line no-unused-vars

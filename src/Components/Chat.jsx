@@ -2,6 +2,7 @@ import React from 'react';
 import Answers from './Answers';
 
 function Chat({ item, index }) {
+  console.log('item:', item, 'item.text:', item.text);
   return (
     <>
       <div

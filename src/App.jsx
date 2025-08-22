@@ -15,8 +15,7 @@ function App() {
   const [loader, setLoader] = useState(false);
 
   const handleClick = async () => {
-    const payloadData = question ? question : savedHistory;
-
+    console.log('Button clicked');
     if (!question && !savedHistory) {
       return;
     }
@@ -33,6 +32,7 @@ function App() {
         setHistory([question]);
       }
     }
+    const payloadData = question ? question : savedHistory;
     let payload = {
       contents: [
         {
@@ -63,6 +63,7 @@ function App() {
       { type: 'a', text: dataString },
     ]);
   };
+
   // console.log(histoey);
   // console.log(result);
 
